@@ -1,3 +1,30 @@
+# Advanced Leaf Disease Detection
+
+## Live app
+
+**https://leaf-disease-detection-demo.vercel.app/**
+
+The original FastAPI detector uses a Groq vision key. A private API key should not be committed to a public repository, so the public deployment uses a **no-key visual analysis mode** instead of pretending to run the Groq model.
+
+Hosted mode performs real client-side image processing and reports:
+- green pixel share,
+- yellowing share,
+- brown/dry-looking share,
+- a transparent color-based visual-stress index.
+
+It does **not** claim to diagnose a plant disease or prescribe treatment.
+
+The original FastAPI/Groq implementation remains in the repository for environments where a valid `GROQ_API_KEY` is configured securely.
+
+### Run the hosted-style demo locally
+
+```bash
+cd web
+python -m http.server 8000
+```
+
+---
+
 # 🌿 Leaf Disease Detection System
 
 [![FastAPI](https://img.shields.io/badge/FastAPI-0.116.1-009688.svg?style=flat&logo=fastapi)](https://fastapi.tiangolo.com/)
